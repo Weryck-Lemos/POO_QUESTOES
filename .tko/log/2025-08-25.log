@@ -21,3 +21,4 @@
 2025-08-25 02:48:51, EXEC, v:1, k:charger, mode:FULL, rate:100, size:225
 2025-08-25 02:48:53, MOVE, v:1, k:charger, mode:BACK
 2025-08-25 02:48:56, SELF, v:1, k:charger, rate:100, flow:6, edge:5
+2025-08-25 02:53:00, MOVE, v:1, k:array, mode:DOWN
