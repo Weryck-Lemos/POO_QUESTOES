@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-22_00-35-59",
+            "content": "@@ -14,141 +14,452 @@\n til.\n-Scanner;%0A%0Aclass Chinela%7B%0A    private int tamanho;%0A%0A    public Chinela()%7B%0A        tamanho = 0;%0A    %7D%0A%0A    void setTamanho(int \n+ArrayList;%0Aimport java.util.List;%0Aimport java.util.Scanner;%0A%0Aenum Tamanho%7B%0A    PP, P, M, G, GG, XG;%0A    %0A    static List%3CString%3E validos =  new ArrayList%3C%3E();%0A    static%7B%0A        for(Tamanho t : values()) validos.add(t.name());%0A    %7D  %0A%0A    static boolean isValid(String s)%7B%0A        return validos.contains(s); %0A    %7D %0A%7D%0A%0Aclass Blusa%7B%0A    private String tamanho = %22%22;%0A%0A    boolean setTamanho(String tamanho)%7B%0A        if(Tamanho.isValid(\n tamanho)\n %7B%0A  \n@@ -446,34 +446,39 @@\n isValid(tamanho)\n+)\n %7B%0A\n+    \n         this.tam\n@@ -501,18 +501,79 @@\n     \n-%7D%0A%0A\n     \n+    return true;%0A        %7D%0A%0A        return false;%0A    %7D%0A%0A    Str\n in\n-t\n+g\n  get\n@@ -608,24 +608,111 @@\n manho;%0A    %7D\n+%0A%0A    @Override%0A    public String toString()%7B%0A        return (%22Roupa: %22+tamanho);%0A    %7D\n %0A%7D%0A%0Apublic c\n@@ -762,15 +762,15 @@\n ring\n+%5B%5D\n  args\n-%5B%5D\n ) %7B%0A\n@@ -781,49 +781,35 @@\n     \n-Chinela chinela = new Chinela();%0A        \n+Blusa blusa = new Blusa();%0A\n %0A   \n@@ -863,17 +863,25 @@\n     \n+Str\n in\n-t\n+g\n  tam\n-=0\n+anho=%22%22\n ;%0A  \n@@ -896,40 +896,112 @@\n ile(\n-tam %252 ==1 %7C%7C tam%3C20 %7C%7C tam%3E50)%7B\n+!blusa.setTamanho(tamanho))%7B%0A            System.out.println(%22Tamanhos permitidos: PP, P, M, G, GG, XG%22);\n %0A   \n@@ -1016,18 +1016,23 @@\n  tam\n+anho\n  =\n+ \n  sc.next\n Int(\n@@ -1031,11 +1031,8 @@\n next\n-Int\n ();%0A\n@@ -1043,22 +1043,20 @@\n         \n-chinel\n+blus\n a.setTam\n@@ -1063,16 +1063,20 @@\n anho(tam\n+anho\n );%0A     \n@@ -1124,15 +1124,12 @@\n : %22+\n- chinel\n+blus\n a.ge\n@@ -1157,22 +1157,21 @@\n sc.close();%0A\n-%0A\n     %7D%0A%7D%0A%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-08-22_00-35-59",
+            "content": "import java.util.Scanner;\n\nclass Chinela{\n    private int tamanho;\n\n    public Chinela(){\n        tamanho = 0;\n    }\n\n    void setTamanho(int tamanho){\n        this.tamanho = tamanho;\n    }\n\n    int getTamanho(){\n        return tamanho;\n    }\n}\n\npublic class draft {\n    public static void main(String args[]) {\n        Chinela chinela = new Chinela();\n        \n        Scanner sc = new Scanner(System.in);\n\n        int tam=0;\n        while(tam %2 ==1 || tam<20 || tam>50){\n            tam = sc.nextInt();\n            chinela.setTamanho(tam);\n        }\n\n        System.out.println(\"Tamanho: \"+ chinela.getTamanho());\n        sc.close();\n\n    }\n}\n\n",
+            "lines": "36"
+        }
+    ]
+}

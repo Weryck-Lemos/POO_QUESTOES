@@ -1,0 +1,18 @@
+2025-08-21 01:01:12, SELF, v:1, k:chinela, rate:100, flow:6, edge:5
+2025-08-21 01:01:17, MOVE, v:1, k:camisa, mode:PICK
+2025-08-21 01:01:18, EXEC, v:1, k:camisa, mode:FULL, size:112, fail:COMP
+2025-08-21 01:02:07, EXEC, v:1, k:camisa, mode:LOCK, rate:0
+2025-08-21 01:02:09, MOVE, v:1, k:camisa, mode:BACK
+2025-08-21 01:02:18, SELF, v:1, k:camisa, rate:100, flow:6, edge:5
+2025-08-21 01:02:25, MOVE, v:1, k:roupa, mode:DOWN
+2025-08-21 01:02:26, MOVE, v:1, k:relogio, mode:DOWN
+2025-08-21 01:25:26, MOVE, v:1, k:roupa, mode:PICK
+2025-08-21 01:25:27, EXEC, v:1, k:roupa, mode:FULL, size:49, fail:COMP
+2025-08-21 01:26:20, EXEC, v:1, k:roupa, mode:FULL, rate:0, size:49
+2025-08-21 01:26:54, EXEC, v:1, k:roupa, mode:FULL, rate:0, size:49
+2025-08-21 01:29:41, EXEC, v:1, k:roupa, mode:FULL, rate:0, size:49
+2025-08-21 01:29:49, EXEC, v:1, k:roupa, mode:FULL, rate:100, size:49
+2025-08-21 01:29:50, MOVE, v:1, k:roupa, mode:BACK
+2025-08-21 01:29:57, SELF, v:1, k:roupa, rate:100, flow:6, edge:5
+2025-08-21 01:30:00, MOVE, v:1, k:relogio, mode:PICK
+2025-08-21 01:30:01, MOVE, v:1, k:relogio, mode:BACK

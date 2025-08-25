@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-21_01-25-27",
+            "content": "@@ -104,43 +104,25 @@\n t%3C%3E(\n-Arrays.asList(\n %22PP%22,\n- \n %22P%22,\n- \n %22M%22,\n- \n %22G%22,\n- \n %22GG%22\n@@ -128,17 +128,16 @@\n %22, %22XG%22)\n-)\n ;%0A%0A    p\n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-08-21_01-26-20",
+            "content": "@@ -937,26 +937,12 @@\n nho(\n-%22Size: (%22+size+%22)%22\n+size\n );%0A \n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-08-21_01-26-54",
+            "content": "@@ -933,20 +933,34 @@\n Tamanho(\n-size\n+%22Size: (%22+size+%22)%22\n );%0A     \n@@ -1046,26 +1046,16 @@\n println(\n-%22Size: (%22+\n blusa.ge\n@@ -1064,20 +1064,16 @@\n amanho()\n-+%22)%22\n );%0A     \n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-08-21_01-29-41",
+            "content": "@@ -1033,17 +1033,17 @@\n rintln(%22\n-s\n+S\n ize: (%22+\n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-08-21_01-29-49",
+            "content": "import java.util.*;\n\nclass Blusa{\n    private String tamanho;\n\n    List <String> validos = new ArrayList<>(Arrays.asList(\"PP\", \"P\", \"M\", \"G\", \"GG\", \"XG\"));\n\n    public Blusa(){\n        tamanho = \"\";\n    }\n\n    void setTamanho(String t){\n        if(validos.contains(t))tamanho = t;\n        else System.out.println(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\");\n    }\n\n    String getTamanho(){\n        return tamanho;\n    }\n}\n\npublic class Shell {    \n    public static void main(String[] args) {\n        Blusa blusa = new Blusa();\n        \n        while (true) {\n            var line = scanner.nextLine();\n            System.out.println(\"$\" + line);\n            \n            var par = line.split(\" \");\n            var cmd = par[0];\n            \n            if (cmd.equals(\"end\")) {\n                break;\n            }\n            else if (cmd.equals(\"size\")) { \n                String size = par[1];\n                blusa.setTamanho(size);\n            }\n            else if (cmd.equals(\"show\")) {\n                System.out.println(\"size: (\"+blusa.getTamanho()+\")\");\n            }\n            else {\n                System.out.println(\"fail: Comando inv\u00e1lido\");\n            }\n        }\n    }\n    private static Scanner scanner = new Scanner(System.in);\n}\n",
+            "lines": "49"
+        }
+    ]
+}

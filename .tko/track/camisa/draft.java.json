@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-21_01-01-18",
+            "content": "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.Scanner;\n\nenum Tamanho{\n    PP, P, M, G, GG, XG;\n    \n    static List<String> validos =  new ArrayList<>();\n    static{\n        for(Tamanho t : values()) validos.add(t.name());\n    }  \n\n    static boolean isValid(String s){\n        return validos.contains(s); \n    } \n}\n\nclass Blusa{\n    private String tamanho = \"\";\n\n    boolean setTamanho(String tamanho){\n        if(Tamanho.isValid(tamanho)){\n            this.tamanho = tamanho;\n            return true;\n        }\n\n        return false;\n    }\n\n    String getTamanho(){\n        return tamanho;\n    }\n\n    @Override\n    public String toString(){\n        return (\"Roupa: \"+tamanho);\n    }\n}\n\npublic class draft {\n    public static void main(String[] args) {\n        Blusa blusa = new Blusa();\n\n        Scanner sc = new Scanner(System.in);\n\n        String tamanho=\"\";\n        while(!blusa.setTamanho(tamanho)){\n            System.out.println(\"Tamanhos permitidos: PP, P, M, G, GG, XG\");\n            tamanho =  sc.next();\n            blusa.setTamanho(tamanho);\n        }\n\n        System.out.println(\"Tamanho: \"+blusa.getTamanho());\n        sc.close();\n    }\n}\n\n",
+            "lines": "57"
+        }
+    ]
+}

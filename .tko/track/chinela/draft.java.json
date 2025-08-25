@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-20_23-53-02",
+            "content": "import java.util.Scanner;\n\nclass Chinela{\n    private int tamanho;\n\n    public Chinela(){\n        tamanho = 0;\n    }\n\n    void setTamanho(int tamanho){\n        this.tamanho = tamanho;\n    }\n\n    int getTamanho(){\n        return tamanho;\n    }\n}\n\npublic class draft {\n    public static void main(String args[]) {\n        Chinela chinela = new Chinela();\n        \n        Scanner sc = new Scanner(System.in);\n\n        int tam=0;\n        while(tam %2 ==1 || tam<20 || tam>50){\n            tam = sc.nextInt();\n            chinela.setTamanho(tam);\n        }\n\n        System.out.println(\"Tamanho: \"+ chinela.getTamanho());\n        sc.close();\n\n    }\n}\n\n",
+            "lines": "36"
+        }
+    ]
+}

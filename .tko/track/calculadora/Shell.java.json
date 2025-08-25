@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-20_22-37-01",
+            "content": "@@ -351,9 +351,9 @@\n at(%22\n-%25\n+:\n .2f%22\n",
+            "lines": "96"
+        },
+        {
+            "label": "2025-08-20_22-39-29",
+            "content": "@@ -307,62 +307,8 @@\n ()%7B%0A\n-        DecimalFormat df = new DecimalFormat(%220.00%22);%0A\n     \n@@ -336,18 +336,22 @@\n  %22+ \n-df\n+String\n .format(\n disp\n@@ -346,16 +346,24 @@\n .format(\n+%22%25.2f%22, \n display)\n@@ -366,18 +366,18 @@\n lay) + %22\n-,\n  \n+,\n battery \n",
+            "lines": "96"
+        },
+        {
+            "label": "2025-08-20_22-44-07",
+            "content": "@@ -48,33 +48,8 @@\n mat;\n-%0Aimport java.util.Locale;\n %0A%0Acl\n@@ -303,16 +303,70 @@\n ring()%7B%0A\n+        DecimalFormat df = new DecimalFormat(%220.00%22);%0A\n         \n@@ -390,22 +390,18 @@\n  %22+ \n-String\n+df\n .format(\n Loca\n@@ -400,27 +400,8 @@\n mat(\n-Locale.US, %22%25.2f%22, \n disp\n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-08-20_22-45-47",
+            "content": "@@ -13,16 +13,48 @@\n util.*;%0A\n+import java.text.DecimalFormat;%0A\n import j\n@@ -261,25 +261,34 @@\n   battery = \n-0\n+batteryMax\n ;%0A    %7D%0A%0A   \n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-08-20_22-49-11",
+            "content": "@@ -702,69 +702,8 @@\n +b;%0A\n-        battery -=1;%0A        battery = Math.max(battery, 0);%0A\n     \n@@ -1012,69 +1012,8 @@\n /b;%0A\n-        battery -=1;%0A        battery = Math.max(battery, 0);%0A\n     \n",
+            "lines": "96"
+        },
+        {
+            "label": "2025-08-20_22-50-15",
+            "content": "@@ -943,70 +943,8 @@\n  %7D%0A%0A\n-        battery -=1;%0A        battery = Math.max(battery, 0);%0A%0A\n     \n@@ -1069,16 +1069,77 @@\n  = a/b;%0A\n+        battery -=1;%0A        battery = Math.max(battery, 0);%0A\n         \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-08-20_22-50-56",
+            "content": "import java.util.*;\nimport java.util.Locale;\n\nclass Calculadora{\n    double display;\n    int battery;\n    int batteryMax;\n\n    public Calculadora(int batteryMax){\n        this.batteryMax = batteryMax;\n        display = 0;\n        battery = 0;\n    }\n\n    @Override\n    public String toString(){\n        return(\"display = \"+ String.format(Locale.US, \"%.2f\", display) + \", battery = \"+battery);\n    }\n\n    void charge(int increment){\n        battery += increment;\n        battery = Math.min(battery, batteryMax);\n        return;\n    }\n\n    void Somar(int a, int b){\n        if(battery == 0){\n            System.out.println(\"fail: bateria insuficiente\");\n            return;\n        }\n\n        display = a+b;\n        battery -=1;\n        battery = Math.max(battery, 0);\n        return;\n    }\n\n    void Divisao(double a, double b){\n        if(battery == 0){\n            System.out.println(\"fail: bateria insuficiente\");\n            return;\n        }\n\n        battery -=1;\n        battery = Math.max(battery, 0);\n\n        if(b==0){\n            System.out.println(\"fail: divisao por zero\");\n            return;\n        }\n\n        display = a/b;\n        return;\n    }\n}\n\n\npublic class Shell {\n\n    public static void main(String[] args) {\n        Calculadora calc = new Calculadora(0);\n        \n        while (true) {\n            var line = scanner.nextLine();\n            System.out.println(\"$\" + line);\n\n            var par = line.split(\" \");\n            var cmd = par[0];\n\n            if (cmd.equals(\"end\")) {\n                break;\n            }\n            else if (cmd.equals(\"init\")) {\n                int batteryMax = Integer.parseInt(par[1]);\n                calc = new Calculadora(batteryMax);\n            } \n            else if (cmd.equals(\"show\")) {\n                System.out.println(calc.toString());\n            } \n            else if (cmd.equals(\"charge\")) {\n                int value = Integer.parseInt(par[1]);\n                calc.charge(value);\n            } \n            else if (cmd.equals(\"sum\")) {\n                int a = Integer.parseInt(par[1]);\n                int b = Integer.parseInt(par[2]);\n                calc.Somar(a, b);\n            } \n            else if (cmd.equals(\"div\")) {\n                int num = Integer.parseInt(par[1]);\n                int den = Integer.parseInt(par[2]);\n                calc.Divisao(num, den);\n            } \n            else {\n                System.out.println(\"fail: comando invalido\");\n            }\n        }\n    }\n\n    private static Scanner scanner = new Scanner(System.in);\n}\n",
+            "lines": "101"
+        }
+    ]
+}

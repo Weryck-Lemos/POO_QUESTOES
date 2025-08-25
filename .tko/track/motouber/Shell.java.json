@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-24_22-51-41",
+            "content": "@@ -481,17 +481,17 @@\n ormat(%22%25\n-s\n+d\n :%25d%22, no\n",
+            "lines": "131"
+        },
+        {
+            "label": "2025-08-24_22-57-00",
+            "content": "@@ -1706,94 +1706,8 @@\n   %7D%0A\n-        %0A        passageiro.setDinheiro( Math.max(0, motorista.getDinheiro()- custo));\n %0A   \n",
+            "lines": "131"
+        },
+        {
+            "label": "2025-08-24_22-58-17",
+            "content": "@@ -1774,26 +1774,25 @@\n etDinheiro()\n- +\n+-\n  custo));%0A  \n",
+            "lines": "132"
+        },
+        {
+            "label": "2025-08-24_22-59-22",
+            "content": "@@ -1734,32 +1734,44 @@\n iro.setDinheiro(\n+ Math.max(0,\n  motorista.getDi\n@@ -1782,16 +1782,18 @@\n ro()\n--\n+ +\n  custo)\n+)\n ;%0A  \n",
+            "lines": "132"
+        },
+        {
+            "label": "2025-08-24_23-00-14",
+            "content": "@@ -1747,30 +1747,17 @@\n ro( \n-Math.max(0, passageiro\n+motorista\n .get\n@@ -1774,17 +1774,16 @@\n - custo)\n-)\n ;%0A      \n",
+            "lines": "132"
+        },
+        {
+            "label": "2025-08-24_23-00-45",
+            "content": "@@ -1715,145 +1715,8 @@\n    %0A\n-        if(passageiro.getDinheiro() - custo %3C0)%7B%0A            System.out.println(%22fail: Passenger does not have enough money%22);%0A        %7D%0A\n     \n",
+            "lines": "132"
+        },
+        {
+            "label": "2025-08-24_23-01-59",
+            "content": "import java.util.Scanner;\n\nclass Pessoa{\n    private String nome;\n    private int dinheiro;\n\n    public Pessoa(String nome, int dinheiro){\n        this.nome = nome;\n        this.dinheiro = dinheiro;\n    }\n\n    public int getDinheiro() {\n        return dinheiro;\n    }\n\n    public String getNome() {\n        return nome;\n    }\n\n    public void setDinheiro(int dinheiro) {\n        this.dinheiro = dinheiro;\n    }\n\n    @Override\n    public String toString() {\n        return String.format(\"%s:%d\", nome, dinheiro);\n    }\n}\n\nclass Moto{\n    private Pessoa motorista;\n    private Pessoa passageiro;\n    private int custo;\n\n    public Moto(){\n        this.custo = 0;\n    }\n\n\n    boolean temMotorista(){\n        return motorista != null;\n    }\n\n    boolean temPassageiro(){\n        return passageiro != null;\n    }\n\n    @Override\n    public String toString() {\n        String whoM = temMotorista() ? motorista.toString() : \"None\";\n        String whoP = temPassageiro() ? passageiro.toString() : \"None\";\n        return String.format(\"Cost: %d, Driver: %s, Passenger: %s\", custo, whoM, whoP);\n    }\n\n    void setDriver(Pessoa motorista){\n        this.motorista = motorista;\n    }\n\n    void setPass(Pessoa passageiro){\n        if(!temMotorista()){\n            System.out.println(\"fail: sem motorista\");\n            return;\n        }\n\n        this.passageiro = passageiro;\n    }\n\n    void Drive(int dist){\n        if(!temMotorista()){\n            System.out.println(\"fail: sem motorista\");\n            return;\n        }\n        if(temPassageiro()) custo += dist;\n    }\n\n    void leavePass(){\n        if(!temPassageiro()){\n            System.out.println(\"fail: sem passageiro para descer\");\n            return;\n        }\n        \n        if(passageiro.getDinheiro() - custo <0){\n            System.out.println(\"fail: Passenger does not have enough money\");\n        }\n        passageiro.setDinheiro( Math.max(0, passageiro.getDinheiro()- custo));\n        System.out.println(passageiro.getNome()+\":\"+passageiro.getDinheiro()+\" left\");\n        motorista.setDinheiro( motorista.getDinheiro() + custo);\n        custo = 0;\n        passageiro = null;\n    }\n}\n\npublic class Shell {\n\n    public static void main(String[] args) {\n        Moto moto = new Moto();\n        while (true) {\n            var line = scanner.nextLine();\n            System.out.println(\"$\" + line);\n\n            var par = line.split(\" \");\n            var cmd = par[0];\n\n            if (cmd.equals(\"end\")) {\n                break;\n            }\n            else if (cmd.equals(\"show\")) {\n                System.out.println(moto.toString());\n            }\n            else if (cmd.equals(\"setDriver\")) { \n                String name = par[1];\n                int money = Integer.parseInt(par[2]);\n                Pessoa driver = new Pessoa(name, money);\n                moto.setDriver(driver);\n            }\n            else if (cmd.equals(\"setPass\")) { \n                String name = par[1];\n                int money = Integer.parseInt(par[2]);\n                Pessoa pass = new Pessoa(name, money);\n                moto.setPass(pass);\n            }\n            else if (cmd.equals(\"drive\")) { \n                int distance = Integer.parseInt(par[1]);\n                moto.Drive(distance);\n            }\n            else if (cmd.equals(\"leavePass\")) { \n                moto.leavePass();\n            }\n            else {\n                System.out.println(\"fail: command not found\");\n            }\n        }\n    }\n    static Scanner scanner = new Scanner(System.in);\n}\n",
+            "lines": "135"
+        }
+    ]
+}

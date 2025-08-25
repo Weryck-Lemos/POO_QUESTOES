@@ -1,0 +1,4 @@
+2025-08-23 23:36:38, SELF, v:1, k:toalha, rate:100, flow:6, edge:5
+2025-08-23 23:38:22, MOVE, v:1, k:notebook, mode:PICK
+2025-08-23 23:38:24, EXEC, v:1, k:notebook, mode:LOCK, rate:0, size:6
+2025-08-23 23:38:26, MOVE, v:1, k:notebook, mode:BACK

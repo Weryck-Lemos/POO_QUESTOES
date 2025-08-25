@@ -1,0 +1,36 @@
+2025-08-20 20:18:34, MOVE, v:1, k:carro, mode:PICK
+2025-08-20 20:18:37, EXEC, v:1, k:carro, mode:FULL, rate:0, size:106
+2025-08-20 20:19:06, EXEC, v:1, k:carro, mode:FULL, rate:30, size:106
+2025-08-20 20:20:17, EXEC, v:1, k:carro, mode:FULL, rate:60, size:106
+2025-08-20 20:20:32, EXEC, v:1, k:carro, mode:FULL, rate:80, size:106
+2025-08-20 20:20:55, EXEC, v:1, k:carro, mode:FULL, rate:100, size:106
+2025-08-20 20:20:56, MOVE, v:1, k:carro, mode:BACK
+2025-08-20 20:21:00, SELF, v:1, k:carro, rate:100, flow:6, edge:5
+2025-08-20 20:21:06, MOVE, v:1, k:calculadora, mode:DOWN
+2025-08-20 20:21:08, MOVE, v:1, k:enxugar, mode:DOWN
+2025-08-20 22:36:57, MOVE, v:1, k:calculadora, mode:PICK
+2025-08-20 22:37:01, EXEC, v:1, k:calculadora, mode:FULL, rate:0, size:96
+2025-08-20 22:39:29, EXEC, v:1, k:calculadora, mode:FULL, rate:0, size:96
+2025-08-20 22:44:07, EXEC, v:1, k:calculadora, mode:FULL, rate:0, size:97
+2025-08-20 22:45:47, EXEC, v:1, k:calculadora, mode:FULL, rate:0, size:97
+2025-08-20 22:49:11, EXEC, v:1, k:calculadora, mode:FULL, rate:36, size:96
+2025-08-20 22:50:15, EXEC, v:1, k:calculadora, mode:FULL, rate:81, size:100
+2025-08-20 22:50:56, EXEC, v:1, k:calculadora, mode:FULL, rate:100, size:101
+2025-08-20 22:50:58, MOVE, v:1, k:calculadora, mode:BACK
+2025-08-20 22:51:02, SELF, v:1, k:calculadora, rate:100, flow:6, edge:5
+2025-08-20 23:05:48, MOVE, v:1, k:enxugar, mode:PICK
+2025-08-20 23:05:51, EXEC, v:1, k:enxugar, mode:FULL, rate:0, size:84
+2025-08-20 23:07:00, EXEC, v:1, k:enxugar, mode:FULL, rate:20, size:84
+2025-08-20 23:07:43, EXEC, v:1, k:enxugar, mode:FULL, rate:50, size:84
+2025-08-20 23:08:36, EXEC, v:1, k:enxugar, mode:FULL, rate:70, size:84
+2025-08-20 23:13:35, EXEC, v:1, k:enxugar, mode:FULL, rate:30, size:84
+2025-08-20 23:14:20, EXEC, v:1, k:enxugar, mode:FULL, rate:30, size:84
+2025-08-20 23:17:25, EXEC, v:1, k:enxugar, mode:FULL, rate:100, size:83
+2025-08-20 23:26:49, MOVE, v:1, k:enxugar, mode:BACK
+2025-08-20 23:26:59, SELF, v:1, k:enxugar, rate:100, flow:6, edge:5
+2025-08-20 23:27:23, MOVE, v:1, k:chinela, mode:DOWN
+2025-08-20 23:27:24, MOVE, v:1, k:camisa, mode:DOWN
+2025-08-20 23:53:00, SELF, v:1, k:chinela, rate:100, flow:6, edge:5
+2025-08-20 23:53:01, MOVE, v:1, k:chinela, mode:PICK
+2025-08-20 23:53:02, EXEC, v:1, k:chinela, mode:LOCK, rate:0, size:36
+2025-08-20 23:53:12, MOVE, v:1, k:chinela, mode:BACK

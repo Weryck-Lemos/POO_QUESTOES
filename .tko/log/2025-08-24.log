@@ -1,0 +1,62 @@
+2025-08-24 00:42:37, MOVE, v:1, k:notebook, mode:PICK
+2025-08-24 00:42:39, EXEC, v:1, k:notebook, mode:FULL, size:124, fail:COMP
+2025-08-24 00:42:54, EXEC, v:1, k:notebook, mode:FULL, fail:COMP
+2025-08-24 00:42:58, EXEC, v:1, k:notebook, mode:LOCK, rate:0, size:124
+2025-08-24 00:46:27, EXEC, v:1, k:notebook, mode:LOCK, rate:0, size:120
+2025-08-24 00:51:19, MOVE, v:1, k:notebook, mode:BACK
+2025-08-24 00:51:26, SELF, v:1, k:notebook, rate:100, flow:6, edge:5
+2025-08-24 00:51:28, MOVE, v:1, k:motoca, mode:DOWN
+2025-08-24 01:29:50, MOVE, v:1, k:motoca, mode:PICK
+2025-08-24 01:29:51, EXEC, v:1, k:motoca, mode:FULL, rate:0, size:127
+2025-08-24 01:30:55, EXEC, v:1, k:motoca, mode:FULL, rate:0, size:129
+2025-08-24 01:33:19, EXEC, v:1, k:motoca, mode:FULL, rate:0, size:129
+2025-08-24 01:33:27, EXEC, v:1, k:motoca, mode:FULL, rate:13, size:129
+2025-08-24 01:34:16, EXEC, v:1, k:motoca, mode:FULL, rate:13, size:129
+2025-08-24 01:35:44, EXEC, v:1, k:motoca, mode:FULL, rate:13, size:131
+2025-08-24 01:36:13, EXEC, v:1, k:motoca, mode:FULL, rate:33, size:131
+2025-08-24 01:37:19, EXEC, v:1, k:motoca, mode:FULL, rate:40, size:132
+2025-08-24 01:37:54, EXEC, v:1, k:motoca, mode:FULL, rate:60, size:133
+2025-08-24 01:39:38, EXEC, v:1, k:motoca, mode:FULL, rate:66, size:138
+2025-08-24 01:40:50, EXEC, v:1, k:motoca, mode:FULL, rate:60, size:143
+2025-08-24 01:41:07, EXEC, v:1, k:motoca, mode:FULL, rate:66, size:143
+2025-08-24 01:41:17, EXEC, v:1, k:motoca, mode:FULL, rate:80, size:143
+2025-08-24 01:42:28, EXEC, v:1, k:motoca, mode:FULL, rate:86, size:148
+2025-08-24 01:43:26, EXEC, v:1, k:motoca, mode:FULL, rate:93, size:152
+2025-08-24 01:45:14, EXEC, v:1, k:motoca, mode:FULL, rate:100, size:153
+2025-08-24 01:45:15, MOVE, v:1, k:motoca, mode:BACK
+2025-08-24 01:45:18, SELF, v:1, k:motoca, rate:100, flow:6, edge:5
+2025-08-24 01:51:52, MOVE, v:1, k:motoca, mode:PICK
+2025-08-24 01:51:55, EXEC, v:1, k:motoca, mode:FULL, rate:100, size:152
+2025-08-24 01:51:56, MOVE, v:1, k:motoca, mode:BACK
+2025-08-24 16:16:11, MOVE, v:1, k:grafite, mode:DOWN
+2025-08-24 17:08:52, MOVE, v:1, k:grafite, mode:PICK
+2025-08-24 17:08:54, EXEC, v:1, k:grafite, mode:FULL, rate:0, size:148
+2025-08-24 17:09:56, EXEC, v:1, k:grafite, mode:FULL, rate:0, size:149
+2025-08-24 17:11:28, EXEC, v:1, k:grafite, mode:FULL, rate:0, size:149
+2025-08-24 17:11:56, EXEC, v:1, k:grafite, mode:FULL, rate:0, size:149
+2025-08-24 17:12:11, EXEC, v:1, k:grafite, mode:FULL, rate:0, size:149
+2025-08-24 17:15:58, EXEC, v:1, k:grafite, mode:FULL, rate:10, size:150
+2025-08-24 17:16:35, EXEC, v:1, k:grafite, mode:FULL, rate:20, size:150
+2025-08-24 17:16:54, EXEC, v:1, k:grafite, mode:FULL, rate:10, size:150
+2025-08-24 17:17:13, EXEC, v:1, k:grafite, mode:FULL, rate:70, size:150
+2025-08-24 17:20:01, EXEC, v:1, k:grafite, mode:FULL, rate:70, size:150
+2025-08-24 17:20:42, EXEC, v:1, k:grafite, mode:FULL, rate:70, size:150
+2025-08-24 17:22:46, EXEC, v:1, k:grafite, mode:FULL, rate:70, size:150
+2025-08-24 17:23:05, EXEC, v:1, k:grafite, mode:FULL, rate:70, size:150
+2025-08-24 17:26:33, EXEC, v:1, k:grafite, mode:FULL, rate:100, size:150
+2025-08-24 17:26:34, MOVE, v:1, k:grafite, mode:BACK
+2025-08-24 17:26:43, SELF, v:1, k:grafite, rate:100, flow:6, edge:5
+2025-08-24 17:28:27, MOVE, v:1, k:motouber, mode:DOWN
+2025-08-24 22:51:40, MOVE, v:1, k:motouber, mode:PICK
+2025-08-24 22:51:41, EXEC, v:1, k:motouber, mode:FULL, rate:12, size:131
+2025-08-24 22:57:00, EXEC, v:1, k:motouber, mode:FULL, rate:75, size:131
+2025-08-24 22:58:17, EXEC, v:1, k:motouber, mode:FULL, rate:75, size:132
+2025-08-24 22:59:22, EXEC, v:1, k:motouber, mode:FULL, rate:75, size:132
+2025-08-24 23:00:14, EXEC, v:1, k:motouber, mode:FULL, rate:75, size:132
+2025-08-24 23:00:43, MOVE, v:1, k:motouber, mode:PICK
+2025-08-24 23:00:45, EXEC, v:1, k:motouber, mode:FULL, rate:87, size:132
+2025-08-24 23:01:59, EXEC, v:1, k:motouber, mode:FULL, rate:100, size:135
+2025-08-24 23:02:04, MOVE, v:1, k:motouber, mode:BACK
+2025-08-24 23:02:12, SELF, v:1, k:motouber, rate:100, flow:6, edge:5
+2025-08-24 23:02:36, SELF, v:1, k:motouber, rate:100, flow:6, edge:5
+2025-08-24 23:02:50, MOVE, v:1, k:tamagotchi, mode:DOWN

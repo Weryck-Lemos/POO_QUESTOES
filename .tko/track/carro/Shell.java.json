@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-20_20-18-37",
+            "content": "@@ -222,18 +222,16 @@\n +pass+ %22\n-, \n gas: %22+g\n@@ -235,18 +235,16 @@\n %22+gas+ %22\n-, \n km: %22+km\n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-08-20_20-19-06",
+            "content": "@@ -291,17 +291,16 @@\n if(pass%3E\n-=\n 2)%7B%0A    \n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-08-20_20-20-17",
+            "content": "@@ -808,36 +808,36 @@\n tln(%22fail: n\n-ao ha\n+%C3%A3o h%C3%A1\n  ningu\n-e\n+%C3%A9\n m no carro%22)\n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-08-20_20-20-32",
+            "content": "@@ -1053,27 +1053,26 @@\n o ap\n-o\n+%C3%B3\n s andar\n- \n %22 +\n-gas\n+dist\n + %22\n- \n km%22)\n",
+            "lines": "106"
+        },
+        {
+            "label": "2025-08-20_20-20-55",
+            "content": "import java.util.*;\n\nclass Carro{\n    int pass;\n    int km;\n    int gas;\n\n    public Carro(){\n        pass = 0;\n        km = 0;\n        gas = 0;\n    }\n\n    @Override\n    public String toString() {\n        return (\"pass: \"+pass+ \", gas: \"+gas+ \", km: \"+km);\n    }\n\n    void enter(){\n        if(pass>=2){\n            System.out.println(\"fail: limite de pessoas atingido\");\n            return;\n        }\n\n        pass+=1;\n        pass = Math.min(pass, 2);\n    }\n\n    void leave(){\n        if(pass <1){\n            System.out.println(\"fail: nao ha ninguem no carro\");\n            return;\n        }\n\n        pass-=1;\n        pass = Math.max(pass, 0);\n    }\n\n    void fuel(int ic){\n        gas+=ic;\n        gas = Math.min(gas, 100);\n    }\n\n    void drive(int dist){\n        if(pass<1){\n            System.out.println(\"fail: nao ha ninguem no carro\");\n            return;\n        }\n\n        if(gas==0){\n            System.out.println(\"fail: tanque vazio\");\n            return;\n        }\n\n        if(dist>gas){\n            System.out.println(\"fail: tanque vazio apos andar \" +gas+ \" km\");\n            km+=gas;\n            gas=0;\n            return;\n        }\n\n        km+=dist;\n        gas-=dist;\n        return;\n    }\n}\n\n\npublic class Shell {\n    \n    public static void main(String[] a) {\n        Carro car = new Carro();\n        while (true) {\n            var line = scanner.nextLine();\n            System.out.println(\"$\" + line);\n\n            var par = line.split(\" \");\n            var cmd = par[0];\n\n            if (cmd.equals(\"end\")) {\n                break;\n            }\n            else if (cmd.equals(\"show\")) {\n                System.out.println(car.toString());\n            } \n            else if (cmd.equals(\"enter\")) {\n                car.enter();\n            } \n            else if (cmd.equals(\"leave\")) {\n                car.leave();\n            } \n            else if (cmd.equals(\"fuel\")) {\n                int increment = Integer.parseInt(par[1]);\n                car.fuel(increment);\n            } \n            else if (cmd.equals(\"drive\")) {\n                int distance = Integer.parseInt(par[1]);\n                car.drive(distance);\n            }  \n            else {\n                System.out.println(\"fail: comando invalido\");\n            }\n        }   \n    }\n    private static Scanner scanner = new Scanner(System.in);\n}\n",
+            "lines": "106"
+        }
+    ]
+}

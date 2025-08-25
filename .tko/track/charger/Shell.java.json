@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-25_02-33-14",
+            "content": "@@ -1619,16 +1619,29 @@\n !ligado)\n+%7B%0A           \n  System.\n@@ -1676,36 +1676,62 @@\n gado%22);%0A        \n-else\n+    return;%0A        %7D%0A%0A       \n  System.out.prin\n",
+            "lines": "221"
+        },
+        {
+            "label": "2025-08-25_02-34-06",
+            "content": "@@ -1628,32 +1628,34 @@\n System.out.print\n+ln\n (%22Notebook: desl\n@@ -1791,24 +1791,26 @@\n em.out.print\n+ln\n (%22, Carregad\n@@ -1914,16 +1914,18 @@\n ut.print\n+ln\n (%22, Bate\n",
+            "lines": "217"
+        },
+        {
+            "label": "2025-08-25_02-34-35",
+            "content": "@@ -1712,17 +1712,16 @@\n gado por\n- \n %22 + temp\n",
+            "lines": "217"
+        },
+        {
+            "label": "2025-08-25_02-34-47",
+            "content": "@@ -1726,17 +1726,16 @@\n empo + %22\n- \n min%22);%0A%0A\n",
+            "lines": "217"
+        },
+        {
+            "label": "2025-08-25_02-34-53",
+            "content": "@@ -2307,123 +2307,8 @@\n  %7D%0A%0A\n-        if(bateria == null && carregador != null)%7B%0A            this.tempo += tempo;%0A            return;%0A        %7D%0A%0A\n     \n@@ -2443,40 +2443,71 @@\n     \n+%7D%0A%0A\n     \n-return;%0A        %7D%0A%0A    \n+    else if(bateria != null %7C%7C carregador != null)%7B%0A\n     \n-%0A\n     \n@@ -2564,32 +2564,36 @@\n rga());%0A        \n+  \n+  \n bateria.consumir\n@@ -2606,32 +2606,36 @@\n Usado);%0A        \n+    \n this.tempo += te\n@@ -2640,32 +2640,36 @@\n tempo;%0A%0A        \n+  \n+  \n if(bateria.getCa\n@@ -2666,27 +2666,45 @@\n eria\n-.getCarga() == 0)%7B%0A\n+ == null && carregador == null)%7B%0A    \n     \n@@ -2756,32 +2756,36 @@\n %22);%0A            \n+    \n desligar();%0A    \n@@ -2788,22 +2788,31 @@\n         \n+    \n %7D%0A    \n+    %7D\n %0A    %7D%0A%0A\n",
+            "lines": "217"
+        },
+        {
+            "label": "2025-08-25_02-41-02",
+            "content": "@@ -3590,15 +3590,9 @@\n ln(%22\n-fail: s\n+S\n em c\n",
+            "lines": "223"
+        },
+        {
+            "label": "2025-08-25_02-43-02",
+            "content": "@@ -3766,26 +3766,8 @@\n eria\n- == null %7C%7Cbateria\n .get\n",
+            "lines": "223"
+        },
+        {
+            "label": "2025-08-25_02-45-23",
+            "content": "@@ -3260,31 +3260,9 @@\n vido\n- %22 + bateria.toString()\n+%22\n );%0A \n@@ -3592,17 +3592,17 @@\n (%22fail: \n-S\n+s\n em carre\n",
+            "lines": "223"
+        },
+        {
+            "label": "2025-08-25_02-46-40",
+            "content": "@@ -3256,17 +3256,39 @@\n Removido\n-%22\n+ %22 + bateria.toString()\n );%0A    %7D\n",
+            "lines": "223"
+        },
+        {
+            "label": "2025-08-25_02-47-05",
+            "content": "@@ -3203,88 +3203,67 @@\n     \n-System.out.println(%22Removido%22 + bateria.toString());%0A        this.bateria = null\n+this.bateria = null;%0A        System.out.println(%22Removido%22)\n ;%0A  \n",
+            "lines": "223"
+        },
+        {
+            "label": "2025-08-25_02-47-32",
+            "content": "@@ -3227,17 +3227,16 @@\n Removido\n- \n %22 + bate\n@@ -3256,52 +3256,8 @@\n ));%0A\n-        if(carregador == null) desligar();%0A%0A\n     \n",
+            "lines": "223"
+        },
+        {
+            "label": "2025-08-25_02-48-51",
+            "content": "import java.util.Scanner;\n\nclass Carregador{\n    private int potencia;\n\n    public Carregador(int potencia){\n        this.potencia = potencia;\n    }\n\n    public int getPotencia(){\n        return potencia;\n    }\n}\n\nclass Bateria{\n    private int carga;\n    private int capacidade;\n\n    public Bateria(int capacidade){\n        this.carga = capacidade;\n        this.capacidade = capacidade;\n    }\n\n    int getCarga(){\n        return carga;\n    }\n\n    int getCapacidade(){\n        return capacidade;\n    }\n\n    public void setCarga(int carga) {\n        this.carga = carga;\n    }\n\n    void consumir(int tempo){\n        carga = Math.max(0, carga - tempo);\n    }\n\n    void carregar(int potencia, int tempo){\n        carga = Math.min(capacidade, carga+potencia * tempo);\n    }\n\n    @Override\n    public String toString() {\n        return String.format(\"%d/%d\", carga, capacidade);\n    }\n}\n\nclass Notebook{\n    private boolean ligado;\n    private Bateria bateria;\n    private Carregador carregador;\n    private int tempo;\n\n    public Notebook(){\n        this.ligado = false;\n        this.tempo = 0;\n    }\n\n    void ligar(){\n        if ( (bateria != null && bateria.getCarga() >0) || (carregador != null)){\n            if(!ligado) ligado =true;\n            else System.out.println(\"Notebook ja esta ligado\");\n            return;\n        }\n\n        else{\n            System.out.println(\"fail: n\u00e3o foi poss\u00edvel ligar\");\n        }\n    }\n\n    void desligar(){\n        if(ligado){\n            ligado = false;\n            return;\n        }\n\n        System.out.println(\"Notebook ja esta desligado\");\n    }\n\n    void show(){\n        if(!ligado) System.out.print(\"Notebook: desligado\");\n        else System.out.print(\"Notebook: ligado por \" + tempo + \" min\");\n\n        if(carregador != null){\n            System.out.print(\", Carregador \"+ carregador.getPotencia()+\"W\");\n        }\n\n        if(bateria != null){\n            System.out.print(\", Bateria \"+ bateria.toString());\n        }\n\n        System.out.println(\"\");\n    }\n\n    void usar(int tempo){\n        if(!ligado){\n            System.out.println(\"fail: desligado\");\n            return;\n        }\n\n        if(bateria == null && carregador == null){\n            System.out.println(\"Sem carga na bateria ou carregador\");\n            desligar();\n            return;\n        }\n\n        if(bateria == null && carregador != null){\n            this.tempo += tempo;\n            return;\n        }\n\n        if(carregador != null){\n            bateria.carregar(carregador.getPotencia(), tempo);\n            this.tempo += tempo;\n            return;\n        }\n\n        \n        int tempoUsado = Math.min(tempo, bateria.getCarga());\n        bateria.consumir(tempoUsado);\n        this.tempo += tempo;\n\n        if(bateria.getCarga() == 0){\n            System.out.println(\"fail: descarregou\");\n            desligar();\n        }\n    \n    }\n\n    void SetBateria(Bateria bateria){\n        if(this.bateria == null){\n            this.bateria = bateria;\n            return;\n        }\n\n        System.out.println(\"fail: bateria ja conectado\");\n    }\n\n    void rmBateria(){\n        if(bateria == null){\n            System.out.println(\"fail: Sem bateria\");\n            return;\n        }\n\n        System.out.println(\"Removido \" + bateria.toString());\n        if(carregador == null) desligar();\n\n        this.bateria = null;\n    }\n\n    void setCarregador(Carregador carregador){\n        if(this.carregador == null){\n            this.carregador = carregador;\n            return;\n        }\n\n        System.out.println(\"fail: carregador j\u00e1 conectado\");\n    }\n\n    void rmCarregador(){\n        if(this.carregador == null){\n            System.out.println(\"fail: Sem carregador\");\n            return;\n        }\n\n        System.out.println(\"Removido \"+carregador.getPotencia()+\"W\");\n        this.carregador = null;\n\n        if(bateria == null ||bateria.getCarga() == 0)desligar();\n    }\n\n}\n\npublic class Shell {\n    public static void main(String[] _args) {\n        Notebook notebook = new Notebook();\n        while (true) {\n            var line = scanner.nextLine();\n            System.out.println(\"$\" + line);\n\n            var par = line.split(\" \");\n            var cmd = par[0];\n\n            if(cmd.equals(\"end\")) {\n                break;\n            }\n            else if (cmd.equals(\"show\")) { \n                notebook.show();\n            }\n            else if(cmd.equals(\"turn_on\")) { \n                notebook.ligar();\n            }\n            else if(cmd.equals(\"turn_off\")) { \n                notebook.desligar();\n            }\n            else if(cmd.equals(\"use\")) { \n                var minutes = Integer.parseInt(par[1]);\n                notebook.usar(minutes);\n            }\n            else if(cmd.equals(\"set_battery\")) {\n                var capacity = Integer.parseInt(par[1]);\n                Bateria bateria = new Bateria(capacity);\n                notebook.SetBateria(bateria);\n            }\n            else if(cmd.equals(\"rm_battery\")) {\n                notebook.rmBateria();\n            }\n            else if(cmd.equals(\"set_charger\")) {\n                var power = Integer.parseInt(par[1]);\n                Carregador carregador = new Carregador(power);\n                notebook.setCarregador(carregador);\n            }\n            else if(cmd.equals(\"rm_charger\")) {\n                notebook.rmCarregador();\n            }\n            else {\n                System.out.println(\"fail: comando inv\u00e1lido\");\n            }\n\n        }\n    }\n    private static Scanner scanner = new Scanner(System.in);\n}\n",
+            "lines": "225"
+        }
+    ]
+}

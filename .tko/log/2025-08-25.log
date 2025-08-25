@@ -1,0 +1,23 @@
+2025-08-25 01:23:59, MOVE, v:1, k:tamagotchi, mode:PICK
+2025-08-25 01:24:01, EXEC, v:1, k:tamagotchi, mode:FULL, rate:37, size:171
+2025-08-25 01:25:59, EXEC, v:1, k:tamagotchi, mode:FULL, rate:12, size:171
+2025-08-25 01:28:35, EXEC, v:1, k:tamagotchi, mode:FULL, rate:62, size:173
+2025-08-25 01:31:57, EXEC, v:1, k:tamagotchi, mode:FULL, rate:100, size:173
+2025-08-25 01:31:59, MOVE, v:1, k:tamagotchi, mode:BACK
+2025-08-25 01:32:03, SELF, v:1, k:tamagotchi, rate:100, flow:6, edge:5
+2025-08-25 01:32:06, MOVE, v:1, k:charger, mode:DOWN
+2025-08-25 02:33:12, MOVE, v:1, k:charger, mode:PICK
+2025-08-25 02:33:14, EXEC, v:1, k:charger, mode:FULL, rate:15, size:221
+2025-08-25 02:34:06, EXEC, v:1, k:charger, mode:FULL, rate:0, size:217
+2025-08-25 02:34:35, EXEC, v:1, k:charger, mode:FULL, rate:20, size:217
+2025-08-25 02:34:47, EXEC, v:1, k:charger, mode:FULL, rate:20, size:217
+2025-08-25 02:34:53, EXEC, v:1, k:charger, mode:FULL, rate:25, size:217
+2025-08-25 02:41:02, EXEC, v:1, k:charger, mode:FULL, rate:40, size:223
+2025-08-25 02:43:02, EXEC, v:1, k:charger, mode:FULL, rate:40, size:223
+2025-08-25 02:45:23, EXEC, v:1, k:charger, mode:FULL, rate:85, size:223
+2025-08-25 02:46:40, EXEC, v:1, k:charger, mode:FULL, rate:65, size:223
+2025-08-25 02:47:05, EXEC, v:1, k:charger, mode:FULL, rate:90, size:223
+2025-08-25 02:47:32, EXEC, v:1, k:charger, mode:FULL, rate:90, size:223
+2025-08-25 02:48:51, EXEC, v:1, k:charger, mode:FULL, rate:100, size:225
+2025-08-25 02:48:53, MOVE, v:1, k:charger, mode:BACK
+2025-08-25 02:48:56, SELF, v:1, k:charger, rate:100, flow:6, edge:5

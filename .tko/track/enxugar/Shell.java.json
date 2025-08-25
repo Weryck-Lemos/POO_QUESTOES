@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-20_23-05-51",
+            "content": "@@ -305,65 +305,26 @@\n rn (\n-%22Cor: %22+\n color\n+ \n + %22\n-, Tamanho: %22+ size+ %22, Umidade: %22+wetness\n+ %22 + size\n );%0A \n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-08-20_23-07-00",
+            "content": "@@ -544,22 +544,23 @@\n  %7D%0A%0A    \n-String\n+boolean\n  isDry()\n@@ -595,21 +595,20 @@\n 0 ? \n-%22sim%22 : %22nao%22\n+true : false\n ;%0A  \n@@ -1682,35 +1682,16 @@\n         \n-System.out.println(\n toalha.i\n@@ -1696,17 +1696,16 @@\n .isDry()\n-)\n ;%0A      \n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-08-20_23-07-43",
+            "content": "@@ -686,17 +686,16 @@\n etness %3E\n-=\n  umity()\n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-08-20_23-08-36",
+            "content": "@@ -669,44 +669,8 @@\n nt;%0A\n-        System.out.println(umity());\n %0A   \n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-08-20_23-13-35",
+            "content": "@@ -454,17 +454,16 @@\n ize == %22\n- \n P%22) retu\n@@ -494,17 +494,16 @@\n ize == %22\n- \n M%22) retu\n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-08-20_23-14-20",
+            "content": "@@ -453,21 +453,17 @@\n size\n-.equals(%22\n+ == %22 \n P%22)\n-)\n  ret\n@@ -494,21 +494,17 @@\n size\n-.equals(%22\n+ == %22 \n M%22)\n-)\n  ret\n@@ -667,16 +667,53 @@\n amount;%0A\n+        System.out.println(umity());%0A\n         \n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-08-20_23-17-25",
+            "content": "import java.util.Scanner;\n\nclass Towel{\n    String color;\n    String size;\n    int wetness;\n\n    public Towel(){};\n\n    public Towel(String color, String size){\n        this.color = color;\n        this.size = size;\n        this.wetness = 0;\n    }\n\n    @Override\n    public String toString(){\n        return (\"Cor: \"+color+ \", Tamanho: \"+ size+ \", Umidade: \"+wetness);\n    }\n\n    void writeOut(){\n        wetness = 0;\n    }\n\n    int umity(){\n        if(size.equals(\"P\")) return 10;\n        else if(size.equals(\"M\")) return 20;\n        else return 30;\n    }\n\n    String isDry(){\n        return wetness == 0 ? \"sim\" : \"nao\";\n    }\n\n    void dry(int amount){\n        wetness += amount;\n        if(wetness >= umity()){\n            System.out.println(\"toalha encharcada\");\n            wetness = umity();\n        }\n    }\n}\n\npublic class Shell {\n    \n    public static void main(String[] a) {\n        Towel toalha = new Towel();\n        \n        while (true) {\n            var line = scanner.nextLine();\n            System.out.println(\"$\" + line);\n\n            var par = line.split(\" \");\n            var cmd = par[0];\n\n            if (cmd.equals(\"end\")) {\n                break;\n            }\n            else if (cmd.equals(\"criar\")) {\n                var cor = par[1];\n                var tamanho = par[2];\n                toalha = new Towel(cor, tamanho);\n            }\n            else if (cmd.equals(\"mostrar\")) {\n                System.out.println(toalha.toString());\n            }\n            else if (cmd.equals(\"enxugar\")) { \n                var quantidade = Integer.parseInt(par[1]);\n                toalha.dry(quantidade);\n            }\n            else if (cmd.equals(\"seca\")) {\n                System.out.println(toalha.isDry());\n            }\n            else if (cmd.equals(\"torcer\")) { \n                toalha.writeOut();\n            }\n            else {\n                System.out.println(\"comando invalido\");\n            }\n        }\n    }\n    private static Scanner scanner = new Scanner(System.in);\n}\n",
+            "lines": "83"
+        }
+    ]
+}

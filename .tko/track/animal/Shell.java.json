@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-19_03-30-29",
+            "content": "@@ -1365,35 +1365,16 @@\n         \n-System.out.println(\n animal.t\n@@ -1382,17 +1382,16 @@\n String()\n-)\n ;%0A      \n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-08-19_03-31-35",
+            "content": "@@ -361,16 +361,17 @@\n  if(age%3E\n+=\n 4)%7B%0A    \n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-08-19_03-32-57",
+            "content": "@@ -358,68 +358,15 @@\n     \n-age += increment;%0A        if(age%3E=4)age=4;%0A%0A        if(age%3E=\n+if(age%3E\n 4)%7B%0A\n@@ -451,32 +451,84 @@\n eturn;%0A        %7D\n+%0A%0A        age += increment;%0A        if(age%3E=4)age=4;\n %0A    %7D%0A%0A    void\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-08-19_03-33-40",
+            "content": "import java.util.Scanner;\n\nclass Animal{\n    String specie;\n    int age;\n    String sound;\n\n    public Animal(String specie, String sound){\n        this.specie = specie;\n        this.age = 0;\n        this.sound = sound;\n    }\n\n    @Override\n    public String toString() {\n        return (specie+\":\"+age+\":\"+sound);\n    }\n\n    void ageBy(int increment){\n        age += increment;\n        if(age>=4)age=4;\n\n        if(age>=4){\n            System.out.println(\"warning: \"+ specie + \" morreu\");\n            return;\n        }\n    }\n\n    void makeSound(){\n        if(age == 0)System.out.println(\"---\");\n        else if(age == 4)System.out.println(\"RIP\");\n        else System.out.println(sound);\n    }\n}\n\npublic class Shell {\n\n    public static void main(String[] _args) {\n        Animal animal = new Animal(\"\", \"\");\n\n        while (true) {\n            var line = scanner.nextLine();\n            System.out.println(\"$\" + line);\n\n            var par = line.split(\" \");\n            var cmd = par[0];\n\n            if (cmd.equals(\"end\")  ) { \n                break;\n            }\n            else if (cmd.equals(\"init\") ) {\n                // INICIE O ANIMAL UTILIZANDO O CONSTRUTOR\n                var species = par[1];\n                var noise = par[2];\n                animal = new Animal(species, noise);\n            } \n            else if (cmd.equals(\"show\")) {\n                System.out.println(animal.toString());\n            } \n            else if (cmd.equals(\"noise\")) {\n                animal.makeSound();\n            } \n            else if (cmd.equals(\"grow\") ) {\n                // AUMENTE A IDADE DO ANIMAL\n                var increment = Integer.parseInt(par[1]);\n                animal.ageBy(increment);\n            }  \n            else {\n                System.out.println(\"fail: comando invalido\\n\");\n            }\n        }\n    }\n\n    static Scanner scanner = new Scanner(System.in);\n}",
+            "lines": "75"
+        }
+    ]
+}
