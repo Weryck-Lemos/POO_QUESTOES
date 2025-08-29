@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-28_01-45-02",
+            "content": "@@ -714,16 +714,18 @@\n ut.print\n+ln\n (%22Impres\n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-08-28_01-46-13",
+            "content": "@@ -714,17 +714,16 @@\n ut.print\n-f\n (%22Impres\n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-08-28_01-46-19",
+            "content": "@@ -1440,16 +1440,18 @@\n ut.print\n+ln\n (v + %22 %22\n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-08-28_01-46-38",
+            "content": "@@ -1642,15 +1642,8 @@\n orio\n-.get(i)\n +%22 %22\n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-08-28_01-48-09",
+            "content": "@@ -1626,16 +1626,18 @@\n ut.print\n+ln\n (aleator\n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-08-28_01-48-22",
+            "content": "import java.util.*;\n\npublic class draft {\n    public static void main(String args[]) {\n        //criar um array vazio\n        List<Integer> lista = new ArrayList<>();\n        System.out.println(\"Array vazio: \"+ lista);\n\n        //criar array preenchido\n        List<Integer> preenchido = new ArrayList<>(Arrays.asList(1,2,3,4,5));\n        System.out.println(\"Array preenchido: \"+ preenchido);\n\n        //adicionar elemento\n        preenchido.add(9);\n        System.out.println(\"adicionando elemento: \"+ preenchido);\n\n        //remover \u00faltimo elemento\n        preenchido.remove(preenchido.size()-1);\n        System.out.println(\"Ap\u00f3s remover o \u00faltimo: \"+ preenchido);\n\n        //impressao formatada\n        System.out.printf(\"Impress\u00e3o formatada: %s (tamanho=%d)%n\", preenchido, preenchido.size());\n\n        //cria array de 0 a n\n        int n=10;\n        List<Integer> seq = new ArrayList<>();\n        for(int i=0; i<=n; i++)seq.add(i);\n        System.out.println(\"Sequ\u00eancia de 0...10: \"+ seq);\n\n        //cria array com valores aleat\u00f3rios\n        Random r = new Random();\n        List<Integer> aleatorio = new ArrayList<>();\n        for(int i=0; i<8; i++)aleatorio.add(r.nextInt(11)-5);\n        System.out.println(\"Aleatorio: \"+aleatorio);\n\n        //acessa elementos por indice\n        System.out.println(\"Elemento seq[3] = \"+seq.get(3));\n\n        //for-each\n        System.out.println(\"For-each: \");\n        for(int v: aleatorio)System.out.print(v + \" \");\n        System.out.println();\n\n        //percorrer com for indexado\n        System.out.println(\"For indexado: \");\n        for(int i=0; i<aleatorio.size(); i++)System.out.print(aleatorio.get(i)+\" \");\n        System.out.println();\n\n        //procurar um elemento x\n        int x = 1;\n        System.out.println(\"Index of \"+x+\" em \"+preenchido+\": \"+preenchido.indexOf(x));\n\n        //Novo array filtrado(pares)\n        List<Integer> pares = new ArrayList<>();\n        for(int v : seq) if(v%2 == 0)pares.add(v);\n        System.out.println(\"Pares: \"+ pares);\n\n        //Novo array transformado (ao quadrado)\n        List<Integer> quadrados = new ArrayList<>();\n        for(int v : pares)quadrados.add(v*v);\n        System.out.println(\"Quadrados: \"+quadrados);\n\n        //Buscar e remover um elemento x\n        List<Integer> exemplo1 = new ArrayList<>(Arrays.asList(2,7,7,3));\n        exemplo1.remove(Integer.valueOf(7));\n        System.out.println(\"Remove primeira ocorr\u00eancia de 7: \"+exemplo1);\n\n        List<Integer> exemplo2 = new ArrayList<>(Arrays.asList(1,2,2,3,3,3));\n        exemplo2.removeIf(v -> v ==2);\n        System.out.println(\"Remover todos os 2: \"+exemplo2);\n\n        //ordenar\n        Collections.sort(aleatorio);\n        System.out.println(\"Ordenado: \"+aleatorio);\n\n        \n    }\n}\n\n",
+            "lines": "79"
+        }
+    ]
+}

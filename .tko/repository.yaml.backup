@@ -4,6 +4,7 @@ version: 0.0.1
 database: database
 expanded:
 - campanha-principal
+- arraylist-i---listas
 tasks:
   toalha: '{rate:100, flow:6, edge:5}'
   animal: '{rate:100, flow:6, edge:5}'
@@ -20,10 +21,11 @@ tasks:
   motouber: '{rate:100, flow:6, edge:5}'
   tamagotchi: '{rate:100, flow:6, edge:5}'
   charger: '{rate:100, flow:6, edge:5}'
+  array: '{rate:100, flow:6, edge:5}'
 flags:
   quests: 0
   tracks: 0
   tasks: 0
   graph: 1
   xray: 0
-index: arraylist-i---listas
+index: budega

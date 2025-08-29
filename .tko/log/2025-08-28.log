@@ -1,0 +1,10 @@
+2025-08-28 01:45:01, MOVE, v:1, k:array, mode:PICK
+2025-08-28 01:45:02, EXEC, v:1, k:array, mode:FULL, size:79, fail:COMP
+2025-08-28 01:46:13, EXEC, v:1, k:array, mode:FULL, size:79, fail:COMP
+2025-08-28 01:46:19, EXEC, v:1, k:array, mode:LOCK, rate:0, size:79
+2025-08-28 01:46:38, EXEC, v:1, k:array, mode:LOCK, rate:0, size:79
+2025-08-28 01:48:09, EXEC, v:1, k:array, mode:LOCK, rate:0, size:79
+2025-08-28 01:48:22, EXEC, v:1, k:array, mode:LOCK, rate:0, size:79
+2025-08-28 01:48:28, MOVE, v:1, k:array, mode:BACK
+2025-08-28 01:48:34, SELF, v:1, k:array, rate:100, flow:6, edge:5
+2025-08-28 01:48:39, MOVE, v:1, k:budega, mode:DOWN
