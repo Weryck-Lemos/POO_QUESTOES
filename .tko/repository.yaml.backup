@@ -22,6 +22,7 @@ tasks:
   tamagotchi: '{rate:100, flow:6, edge:5}'
   charger: '{rate:100, flow:6, edge:5}'
   array: '{rate:100, flow:6, edge:5}'
+  budega: '{rate:100, flow:6, edge:5}'
 flags:
   quests: 0
   tracks: 0

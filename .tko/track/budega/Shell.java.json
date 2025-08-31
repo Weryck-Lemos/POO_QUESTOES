@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-08-31_20-36-27",
+            "content": "@@ -213,81 +213,8 @@\n  %7D%0A%0A\n-    @Override%0A    public String toString() %7B%0A        return nome;%0A    %7D%0A%0A\n %7D%0A%0Ac\n",
+            "lines": "145"
+        },
+        {
+            "label": "2025-08-31_20-36-59",
+            "content": "@@ -151,32 +151,82 @@\n  = nome;%0A    %7D%0A%0A\n+    String getNome()%7B%0A        return nome;%0A    %7D%0A%0A\n     @Override%0A  \n@@ -819,17 +819,16 @@\n ln(%22fail\n-:\n  sem cli\n",
+            "lines": "150"
+        },
+        {
+            "label": "2025-08-31_20-37-22",
+            "content": "@@ -1267,30 +1267,24 @@\n ut.println(%22\n-fail: \n caixa vazio%22\n",
+            "lines": "146"
+        },
+        {
+            "label": "2025-08-31_20-37-39",
+            "content": "import java.util.*;\nimport java.util.stream.Collectors;\n\nclass Person{\n    private String nome;\n    \n    public Person(String nome){\n        this.nome = nome;\n    }\n\n    @Override\n    public String toString() {\n        return nome;\n    }\n\n}\n\nclass Market{\n    private ArrayList<Person> counters;\n    private LinkedList<Person> waiting;\n    private int qtd;\n\n    public Market(int qtd){\n        this.qtd = qtd;\n        counters = new ArrayList<>(qtd);\n        for(int i=0; i<qtd; i++)counters.add(null);\n        waiting = new LinkedList<>();\n    }\n\n    boolean isValid(int n){\n        return (n>=0 && n<qtd);\n    }\n\n    void arrive(Person pessoa){\n        waiting.add(pessoa);\n    }\n\n    void call(int index){\n        if(waiting.isEmpty()){\n            System.out.println(\"fail: sem clientes\");\n            return;\n        }\n\n        if(counters.get(index) != null){\n            System.out.println(\"fail: caixa ocupado\");\n            return;\n        }\n\n        counters.set(index, waiting.pollFirst());  \n    }\n\n    void finish(int index){\n        if(!isValid(index)){\n            System.out.println(\"fail: caixa inexistente\");\n            return;\n        }\n        \n        Person atual = counters.get(index);\n        \n        if(atual == null){\n            System.out.println(\"fail: caixa vazio\");\n            return;\n        }\n\n        counters.set(index, null);\n        return;\n    }\n\n    @Override\n    public String toString() {\n        StringBuilder sb = new StringBuilder();\n\n        sb.append(\"Caixas: [\");\n        for (int i = 0; i< counters.size(); i++) {\n            Person p = counters.get(i);\n            if (p==null){\n                sb.append(\"-----\");\n            } \n            else{\n                sb.append(p.toString());\n            }\n            if(i < counters.size() - 1){\n                sb.append(\", \");\n            }\n        }\n        sb.append(\"]\\n\");\n\n        sb.append(\"Espera: [\");\n        int j = 0;\n        for (Person p : waiting) {\n            sb.append(p.toString());\n            if (j < waiting.size()-1) {\n                sb.append(\", \");\n            }\n            j++;\n        }\n        sb.append(\"]\");\n        return sb.toString();\n    }\n\n\n}\n\n\nclass Shell {\n    public static void main(String[] _args) {\n        Market market = new Market(0);\n        while(true) {\n            var line = scanner.nextLine();\n            System.out.println(\"$\" + line);\n\n            var par = line.split(\" \");\n            var cmd = par[0];\n\n            if (cmd.equals(\"end\")) {\n                break;\n            }\n            else if (cmd.equals(\"init\")) { \n                var qtd_caixas = Integer.parseInt(par[1]);\n                market = new Market(qtd_caixas);\n            }\n            else if (cmd.equals(\"show\")) { \n                System.out.println(market.toString());\n            }\n            else if (cmd.equals(\"arrive\")) { \n                var nome = par[1];\n                Person pessoa = new Person(nome);\n                market.arrive(pessoa);\n            }\n            else if (cmd.equals(\"call\")) { \n                var indice = Integer.parseInt(par[1]);\n                market.call(indice);\n            }\n            else if (cmd.equals(\"finish\")) { \n                var indice = Integer.parseInt(par[1]);\n                market.finish(indice);\n            }\n            else {\n                System.out.println(\"fail: comando invalido\");\n\n            }\n        }\n    }\n\n    static Scanner scanner = new Scanner(System.in);\n}\n",
+            "lines": "146"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+2025-08-31 20:36:25, MOVE, v:1, k:budega, mode:PICK
+2025-08-31 20:36:27, EXEC, v:1, k:budega, mode:FULL, rate:10, size:145
+2025-08-31 20:36:59, EXEC, v:1, k:budega, mode:FULL, rate:70, size:150
+2025-08-31 20:37:22, EXEC, v:1, k:budega, mode:FULL, rate:90, size:146
+2025-08-31 20:37:39, EXEC, v:1, k:budega, mode:FULL, rate:100, size:146
+2025-08-31 20:37:40, MOVE, v:1, k:budega, mode:BACK
+2025-08-31 20:37:47, SELF, v:1, k:budega, rate:100, flow:6, edge:5
