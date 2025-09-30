@@ -4,7 +4,7 @@ version: 0.0.1
 database: database
 expanded:
 - campanha-principal
-- arraylist-i---listas
+- bloco_b-primeiras-classes
 tasks:
   toalha: '{rate:100, flow:6, edge:5}'
   animal: '{rate:100, flow:6, edge:5}'
@@ -29,4 +29,4 @@ flags:
   tasks: 0
   graph: 1
   xray: 0
-index: budega
+index: enxugar

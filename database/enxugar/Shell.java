@@ -5,8 +5,6 @@ class Towel{
     String size;
     int wetness;
 
-    public Towel(){};
-
     public Towel(String color, String size){
         this.color = color;
         this.size = size;
@@ -44,7 +42,7 @@ class Towel{
 public class Shell {
     
     public static void main(String[] a) {
-        Towel toalha = new Towel();
+        Towel toalha = new Towel("","");
         
         while (true) {
             var line = scanner.nextLine();

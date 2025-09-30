@@ -1,0 +1,4 @@
+2025-09-29 09:32:30, MOVE, v:1, k:enxugar, mode:PICK
+2025-09-29 09:32:32, EXEC, v:1, k:enxugar, mode:FULL, size:81, fail:COMP
+2025-09-29 09:32:39, EXEC, v:1, k:enxugar, mode:FULL, rate:100, size:81
+2025-09-29 09:32:40, MOVE, v:1, k:enxugar, mode:BACK
